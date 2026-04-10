@@ -1,5 +1,4 @@
 import React, { useState } from "react";
-import { motion } from "framer-motion";
 import StateCard from "../page/StateCard";
 import {
   LuUsers,
