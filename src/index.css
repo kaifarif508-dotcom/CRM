@@ -1,0 +1,30 @@
+@import "tailwindcss";
+
+
+
+
+::-webkit-scrollbar{
+  background-color: transparent;
+}
+
+
+/* Scrollbar width */
+::-webkit-scrollbar {
+  width: 10px;
+}
+
+/* Track (background) */
+::-webkit-scrollbar-track {
+  background: transparent; /* ya rgba(0,0,0,0) */
+}
+
+/* Thumb (moving part) */
+::-webkit-scrollbar-thumb {
+  background: rgba(0, 0, 0, 0.3); /* light gray / semi transparent */
+  border-radius: 10px;
+}
+
+/* Hover effect */
+::-webkit-scrollbar-thumb:hover {
+  background: rgba(0, 0, 0, 0.5);
+}
