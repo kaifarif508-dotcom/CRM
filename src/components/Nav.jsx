@@ -87,13 +87,7 @@ const Nav = ({ sidebarOpen, setSidebarOpen }) => {
         {/* 🔷 RIGHT */}
         <div className="flex items-center gap-1 sm:gap-2 md:gap-3">
 
-          {/* Dark Mode */}
-          <button
-            
-            className="flex items-center justify-center text-white border h-9 w-9 sm:h-10 sm:w-10 rounded-xl border-white/10 bg-slate-900/70 hover:bg-slate-800"
-          >
-            
-          </button>
+          
 
           {/* Notifications */}
           <div className="relative">
