@@ -59,20 +59,13 @@ const Sidebar = ({ sidebarOpen, setSidebarOpen }) => {
 
           {/* 🔴 TOP BAR (LOGO + CLOSE BTN) */}
           <div className="flex items-center justify-between pb-6 border-b"
-            style={
-              
-                 "rgba(255,255,255,0.05)"
-                 
-            }
+         style={{ borderColor: "rgba(255,255,255,0.05)" }}
           >
             {/* Logo */}
             <div className="flex items-center gap-3">
               <div
                 className="flex items-center justify-center w-10 h-10 shadow-md rounded-xl"
-                style={
-                
-                    "linear-gradient(to bottom right, #7F00FF, #00BFFF)"
-                }
+                style={{ background: "linear-gradient(to bottom right, #7F00FF, #00BFFF)" }}
               >
                 <LuBadgeCheck className="text-xl text-white" />
               </div>
@@ -129,14 +122,10 @@ const Sidebar = ({ sidebarOpen, setSidebarOpen }) => {
 
           {/* Footer */}
           {sidebarOpen && (
-            <div
-              className="pt-4 text-xs border-t"
-              style={
-                
-                   "rgba(255,255,255,0.05)"
-                   
-              }
-            >
+          <div
+  className="pt-4 text-xs border-t"
+  style={{ borderColor: "rgba(255,255,255,0.05)" }}
+>
               © {new Date().getFullYear()} AI CRM
             </div>
           )}
