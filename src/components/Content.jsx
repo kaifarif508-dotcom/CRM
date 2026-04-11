@@ -1,5 +1,6 @@
 import React, { useState } from "react";
 import StateCard from "../page/StateCard";
+
 import {
   LuUsers,
   LuUserCheck,
@@ -11,6 +12,7 @@ import Content2 from "../components/Content2";
 import LeadsOverview from "../page/LeadsOverview";
 import ActivityFeed from "../page/ActivityFeed";
 import PipelineBoard from "../page/PipelineBoard"
+import { motion } from "framer-motion";
 
 /* 🔥 Animation Variants */
 const fadeUp = {

@@ -9,7 +9,7 @@ import {
   LuBadgeCheck,
   LuX
 } from "react-icons/lu";
-import { useDarkMode } from "../Context/DarkMode";
+
 
 const menuItems = [
   { name: "Dashboard", icon: <LuLayoutDashboard /> },
@@ -21,7 +21,7 @@ const menuItems = [
 ];
 
 const Sidebar = ({ sidebarOpen, setSidebarOpen }) => {
-  const { darkMode } = useDarkMode();
+  
 
   return (
     <>
@@ -29,7 +29,7 @@ const Sidebar = ({ sidebarOpen, setSidebarOpen }) => {
       {sidebarOpen && (
         <div
           onClick={() => setSidebarOpen(false)}
-          className="fixed inset-0 bg-black/50 z-30 md:hidden"
+          className="fixed inset-0 z-30 bg-black/50 md:hidden"
         />
       )}
 
@@ -49,34 +49,32 @@ const Sidebar = ({ sidebarOpen, setSidebarOpen }) => {
           ${sidebarOpen ? "md:w-[260px]" : "md:w-[80px]"}
 
           ${
-            darkMode
-              ? "bg-gray-900 text-gray-200 border-gray-700"
-              : "bg-[#0F172A] text-slate-200 border-white/10"
-          }
-          border-r
-        `}
+            
+              "bg-gray-900 text-gray-200 border-gray-700"
+               
+          
+        }`}
       >
         <div className="flex flex-col h-full px-4 py-6 overflow-y-auto scrollbar-hide">
 
           {/* 🔴 TOP BAR (LOGO + CLOSE BTN) */}
           <div className="flex items-center justify-between pb-6 border-b"
-            style={{
-              borderColor: darkMode
-                ? "rgba(255,255,255,0.05)"
-                : "rgba(255,255,255,0.1)",
-            }}
+            style={
+              
+                 "rgba(255,255,255,0.05)"
+                 
+            }
           >
             {/* Logo */}
             <div className="flex items-center gap-3">
               <div
-                className="flex h-10 w-10 items-center justify-center rounded-xl shadow-md"
-                style={{
-                  background: darkMode
-                    ? "linear-gradient(to bottom right, #7F00FF, #00BFFF)"
-                    : "linear-gradient(to bottom right, #8B5CF6, #3B82F6)",
-                }}
+                className="flex items-center justify-center w-10 h-10 shadow-md rounded-xl"
+                style={
+                
+                    "linear-gradient(to bottom right, #7F00FF, #00BFFF)"
+                }
               >
-                <LuBadgeCheck className="text-white text-xl" />
+                <LuBadgeCheck className="text-xl text-white" />
               </div>
 
               {sidebarOpen && (
@@ -93,7 +91,7 @@ const Sidebar = ({ sidebarOpen, setSidebarOpen }) => {
 
             {/* ❌ CLOSE BUTTON (MOBILE ONLY) */}
             <button
-              className="md:hidden text-white text-xl p-2 rounded-lg hover:bg-white/10"
+              className="p-2 text-xl text-white rounded-lg md:hidden hover:bg-white/10"
               onClick={() => setSidebarOpen(false)}
             >
               <LuX />
@@ -112,9 +110,9 @@ const Sidebar = ({ sidebarOpen, setSidebarOpen }) => {
                       transition-all duration-200
                       hover:text-cyan-400
                       ${
-                        darkMode
-                          ? "hover:bg-gray-800"
-                          : "hover:bg-white/5"
+                        
+                           "hover:bg-gray-800"
+                           
                       }
                     `}
                   >
@@ -132,12 +130,12 @@ const Sidebar = ({ sidebarOpen, setSidebarOpen }) => {
           {/* Footer */}
           {sidebarOpen && (
             <div
-              className="text-xs pt-4 border-t"
-              style={{
-                borderColor: darkMode
-                  ? "rgba(255,255,255,0.05)"
-                  : "rgba(255,255,255,0.1)",
-              }}
+              className="pt-4 text-xs border-t"
+              style={
+                
+                   "rgba(255,255,255,0.05)"
+                   
+              }
             >
               © {new Date().getFullYear()} AI CRM
             </div>

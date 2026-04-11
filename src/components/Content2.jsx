@@ -1,5 +1,4 @@
 import React, { useState } from "react";
-import ActivityFeed from "../page/ActivityFeed";
 import AiPanel from "../page/AiPanel";
 import LeadTable from "../page/LeadTable";
 
