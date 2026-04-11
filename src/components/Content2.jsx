@@ -14,16 +14,16 @@ const Content2 = () => {
 
         {/* Header */}
         <div className="mb-6">
-          <h2 className="text-lg md:text-xl font-semibold text-white">
+          <h2 className="text-lg font-semibold text-white md:text-xl">
             Activity & AI Panel
           </h2>
-          <p className="text-xs text-slate-400 mt-1">
+          <p className="mt-1 text-xs text-slate-400">
             Track leads and generate AI responses
           </p>
         </div>
 
         {/* Layout */}
-        <div className="grid grid-cols-1 xl:grid-cols-3 gap-6">
+        <div className="grid grid-cols-1 gap-6 xl:grid-cols-3">
 
           {/* LEFT (Table Big) */}
           <div className="xl:col-span-2">
