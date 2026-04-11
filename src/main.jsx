@@ -8,10 +8,10 @@ import { DarkModeProvider } from './Context/DarkMode.jsx'
 createRoot(document.getElementById('root')).render(
   <StrictMode>
     <BrowserRouter>
-    <DarkModeProvider>
+    
 
     <App />
-    </DarkModeProvider>
+    
     </BrowserRouter>
   </StrictMode>,
 )
