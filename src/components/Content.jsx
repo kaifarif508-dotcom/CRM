@@ -1,5 +1,5 @@
 import React, { useState } from "react";
-import StateCard from "../page/StateCard";
+import StateCard from "../pages/StateCard";
 
 import {
   LuUsers,
@@ -9,9 +9,9 @@ import {
 } from "react-icons/lu";
 import LeadForm from "./LeadForm";
 import Content2 from "../components/Content2";
-import LeadsOverview from "../page/LeadsOverview";
-import ActivityFeed from "../page/ActivityFeed";
-import PipelineBoard from "../page/PipelineBoard"
+import LeadsOverview from "../pages/LeadsOverview";
+import ActivityFeed from "../pages/ActivityFeed";
+import PipelineBoard from "../pages/PipelineBoard"
 import { motion } from "framer-motion";
 
 /* 🔥 Animation Variants */

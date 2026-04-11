@@ -60,14 +60,14 @@ const PipelineBoard = () => {
   return (
     <div className="bg-[#0F172A]/70 backdrop-blur-xl border border-white/10 rounded-2xl p-6 shadow-xl">
       {/* HEADER */}
-      <div className="flex justify-between items-center mb-6">
+      <div className="flex items-center justify-between mb-6">
         <h2 className="text-lg font-semibold text-gray-200">Sales Pipeline</h2>
         <span className="text-xs text-gray-400">Drag & drop leads</span>
       </div>
 
       {/* BOARD */}
       <DragDropContext onDragEnd={onDragEnd}>
-        <div className="flex gap-5 overflow-x-auto pb-3 no-scrollbar">
+        <div className="flex gap-5 pb-3 overflow-x-auto no-scrollbar">
           {STAGES.map((stage) => (
             <Droppable droppableId={stage} key={stage}>
               {(provided, snapshot) => (
@@ -81,7 +81,7 @@ const PipelineBoard = () => {
                   `}
                 >
                   {/* STAGE HEADER */}
-                  <div className="flex justify-between items-center mb-4">
+                  <div className="flex items-center justify-between mb-4">
                     <h3 className="text-sm font-medium text-gray-300">{stage}</h3>
                     <span className={`text-xs px-2 py-1 rounded-full ${COLORS[stage]}`}>
                       {data[stage].length}
@@ -91,7 +91,7 @@ const PipelineBoard = () => {
                   {/* CARDS */}
                   <div className="space-y-3 min-h-25 ">
                     {data[stage].length === 0 && (
-                      <p className="text-xs text-gray-500 text-center mt-4">No leads</p>
+                      <p className="mt-4 text-xs text-center text-gray-500">No leads</p>
                     )}
 
                     {data[stage].map((item, index) => (
@@ -110,8 +110,8 @@ const PipelineBoard = () => {
                             `}
                           >
                             <p className="text-sm font-medium text-gray-200">{item.name}</p>
-                            <p className="text-xs text-gray-400 mt-1">{item.company}</p>
-                            <div className="flex justify-between items-center mt-3">
+                            <p className="mt-1 text-xs text-gray-400">{item.company}</p>
+                            <div className="flex items-center justify-between mt-3">
                               <span className="text-xs text-green-400">{item.value}</span>
                               <span className="text-xs text-indigo-400">🔥 70%</span>
                             </div>

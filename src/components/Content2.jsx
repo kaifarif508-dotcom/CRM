@@ -1,6 +1,6 @@
 import React, { useState } from "react";
-import AiPanel from "../page/AiPanel";
-import LeadTable from "../page/LeadTable";
+import AiPanel from "../pages/AiPanel";
+import LeadTable from "../pages/LeadTable";
 
 const Content2 = () => {
   const [output, setOutput] = useState("");
