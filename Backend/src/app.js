@@ -12,7 +12,10 @@ const app = express()
 app.use(cors(
 {
 
-  origin: "https://crm-wheat-seven-71.vercel.app/",
+   origin: [
+    "https://crm-wheat-seven-71.vercel.app", // Deployed frontend (No trailing slash)
+    "http://localhost:5173"                  // Local frontend (No trailing slash)
+  ],
   credentials: true
 }
 )
